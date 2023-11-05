@@ -1,6 +1,7 @@
 //----------------------------------------
 // Easy Going
 //----------------------------------------
+
 for (let i = 1; i < 21; i++) {
   console.log(i);
 }
@@ -99,7 +100,7 @@ favMovies.unshift();
 favMovies.splice(15, 1, "Avatar");
 // This splice will not permanently alter the array unless the next console.log() is called after this method.
 // favMovies.slice(9);
-// The slice does not permanently alter the array or do anything at the moment. It targets the last half of the array but does nothing until it is 
+// The slice does not permanently alter the array or do anything at the moment. It targets the last half of the array but does nothing until it is
 // assigned.
 let favMovies2 = favMovies.slice(9);
 console.log(favMovies2);
@@ -113,6 +114,18 @@ console.log(favMovies.indexOf("Fast and Furious"));
 //----------------------------------------
 // Where is Waldo
 //----------------------------------------
+
+const whereIsWaldo = [
+  ["Timmy", "Frank"],
+  "Eggbert",
+  ["Lucinda", "Jacc", "Neff", "Snoop"],
+  ["Petunia", ["Baked Goods", "Waldo"]],
+];
+whereIsWaldo.splice(1, 1);
+console.table(whereIsWaldo);
+whereIsWaldo[1].splice(2, 1, "No One");
+console.table(whereIsWaldo);
+console.log(whereIsWaldo[2][1][1]);
 
 //----------------------------------------
 // Excited Kitten
