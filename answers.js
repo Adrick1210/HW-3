@@ -149,3 +149,17 @@ for (let i = 0; i < 20; i++) {
 //----------------------------------------
 // Find the Median
 //----------------------------------------
+
+// declare an array of numbers
+const nums = [
+  14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
+  17, 12, 71, 18, 15, 12,
+];
+
+// sort the numbers in numerical order
+nums.sort();
+// define a variable that checks the middle value
+let median = Math.floor(nums.length / 2);
+// print the middle value using the variable as the targeted index
+console.log(nums[median]);
+
