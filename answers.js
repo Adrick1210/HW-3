@@ -163,3 +163,26 @@ let median = Math.floor(nums.length / 2);
 // print the middle value using the variable as the targeted index
 console.log(nums[median]);
 
+//----------------------------------------
+// Hungry for more
+//----------------------------------------
+
+// Fibonacci //
+
+// define a function that will determine the Fibonacci sequence with a parameter of n(number);
+function fib(n) {
+    // define a variable that stores an array with 2 starting numbers (0 and 1);
+  const num = [0, 1];
+  // loop over the array starting at 2 
+  for (let i = 2; i < n; i++) {
+    // declare that value of i is i-1(1) + i-2(0) to start the Fibonacci and increment as the value increases 
+    num[i] = num[i - 1] + num[i - 2];
+  }
+  // return the number values as they increment 
+  return num;
+  
+}
+console.log(fib(2));
+console.log(fib(3));
+console.log(fib(12));
+
