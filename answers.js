@@ -1,3 +1,13 @@
+//==========================================================================
+// Part 1
+//==========================================================================
+
+// Rate myself at a 4 with html and css materials
+
+//==========================================================================
+// Part 2
+//==========================================================================
+
 //----------------------------------------
 // Easy Going
 //----------------------------------------
@@ -233,7 +243,9 @@ const outfits = [...kristynsCloset, ...thomsCloset].flat();
 for (let i = 0; i < 3; i++) {
   const thomsOutfit = Math.floor(Math.random() * outfits.length);
   const kristynsOutfit = Math.floor(Math.random() * outfits.length);
-  console.log(`Today Kristyn is wearing ${outfits[kristynsOutfit]} and Thom is wearing ${outfits[thomsOutfit]}.`);
+  console.log(
+    `Today Kristyn is wearing ${outfits[kristynsOutfit]} and Thom is wearing ${outfits[thomsOutfit]}.`
+  );
 }
 
 // Dirty Laundry
@@ -241,5 +253,7 @@ for (let i = 0; i < 3; i++) {
 for (let i = 0; i < kristynsCloset.length; i++) {
   console.log("WHIRRR: now washing " + kristynsCloset[i]);
 }
-
-
+// logged thomsCloset using bracket notations
+console.log(thomsCloset[0]);
+console.log(thomsCloset[1]);
+console.log(thomsCloset[2]);
