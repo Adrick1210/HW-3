@@ -171,18 +171,75 @@ console.log(nums[median]);
 
 // define a function that will determine the Fibonacci sequence with a parameter of n(number);
 function fib(n) {
-    // define a variable that stores an array with 2 starting numbers (0 and 1);
+  // define a variable that stores an array with 2 starting numbers (0 and 1);
   const num = [0, 1];
-  // loop over the array starting at 2 
+  // loop over the array starting at 2
   for (let i = 2; i < n; i++) {
-    // declare that value of i is i-1(1) + i-2(0) to start the Fibonacci and increment as the value increases 
+    // declare that value of i is i-1(1) + i-2(0) to start the Fibonacci and increment as the value increases
     num[i] = num[i - 1] + num[i - 2];
   }
-  // return the number values as they increment 
+  // return the number values as they increment
   return num;
-  
 }
 console.log(fib(2));
 console.log(fib(3));
 console.log(fib(12));
+
+//----------------------------------------
+// Return of the Closets
+//----------------------------------------
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "GA hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps",
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],
+  [
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs",
+  ],
+  [
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans",
+  ],
+];
+
+let kristynsShoe = kristynsCloset.splice(0, 1);
+thomsCloset[2].push(kristynsShoe);
+console.log(thomsCloset);
+
+// Dress up
+
+const outfits = [...kristynsCloset, ...thomsCloset].flat();
+
+for (let i = 0; i < 3; i++) {
+  const thomsOutfit = Math.floor(Math.random() * outfits.length);
+  const kristynsOutfit = Math.floor(Math.random() * outfits.length);
+  console.log(`Today Kristyn is wearing ${outfits[kristynsOutfit]} and Thom is wearing ${outfits[thomsOutfit]}.`);
+}
+
+// Dirty Laundry
+
+for (let i = 0; i < kristynsCloset.length; i++) {
+  console.log("WHIRRR: now washing " + kristynsCloset[i]);
+}
+
 
